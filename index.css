@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.Container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Navigation Bar CSS code */
+
+nav{
+    background-color: rgb(249, 125, 125);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 400px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+}
+.checkbtn{
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.menu-icon{
+    width: 30px;
+}
+
+
+
+
+
+/* Hero Section Code */
+
+.herosection{
+    width: 100%;
+    height: calc(100vh - 81px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contentCont{
+    background-image: linear-gradient(to right, #ffffb3, #ffccdd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox{
+    height: auto;
+    max-width: 500px;
+    padding: 1.5rem;
+}
+
+.title{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+.content{
+    margin-top: 45px;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.buttonStyle{
+    margin-top: 45px;
+
+}
+
+.Clickbutton{
+    width: 140px;
+    height: 35px;
+    background: #ff6666;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.ImgCont{
+    width: 100%;
+    height: 100%;
+}
+
+.bannerImg{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* HeroSection 2 Image Container code */
+.ImgContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    width: 100%;
+    background-image: linear-gradient(to right, #ffffb3, #f4a5bf);
+    height: auto;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.ImageBox1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Image1{
+    height: 300px;
+}
+
+.Image1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.lastContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastcontbox{
+    max-width: 500px;
+    height: auto;
+    background: #ff6666;
+    padding: 2rem;
+}
+
+.lastcontbox span{
+    font-size: 13px;
+    text-transform: uppercase;
+    
+}
+
+.lastcontbox h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.arrowbtn{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+.arrowbtnstyle{
+    width: 20px;
+}
+
+
+/* Media Query to make responsive for mobile and tab devices*/
+
+@media screen and (max-width:1192px) {
+    nav ul{
+        margin-right: 120px;
+    }
+
+    .herosection{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ImgContainer{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contentBox{
+        /* padding: 0; */
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    nav ul{
+        margin-right: 20px;
+    }
+
+    .herosection{
+        grid-template-columns: 1fr;
+    }
+
+    .ImgContainer{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media screen and (max-width:540px) {
+    nav ul{
+        margin-right: 20px;
+    }
+
+    .checkbtn{
+        display: block;
+        position: relative;
+        top: 10px;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-color: rgb(249, 125, 125);
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li a{
+        color: white;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .herosection{
+        grid-template-columns: 1fr;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .ImgContainer{
+        grid-template-columns:1fr;
+    }
+
+    .ImageBox1{
+        margin-top: 20px;
+    }
+    
+    .lastcontbox h1{
+        font-size: 20px;
+    }
+
+    .arrowbtn{
+        font-size: 14px;
+    }
+
+    .arrowbtnstyle{
+        width: 15px;
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .title{
+        font-size: 35px;
+    }
+}
